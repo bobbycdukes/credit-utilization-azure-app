@@ -16,7 +16,7 @@ export default function CreditEntryForm() {
     console.log("Submit button clicked. Sending data...");
 
     const response = await fetch(
-      "https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbx8RIXKwbTVm2A5kiTDPE9q-wzBl40nzi5UhtF7jfXBQ8PmNbI4TJl2Y5GDf_BikMyUow/exec",
+      "https://script.google.com/macros/s/AKfycbx8RIXKwbTVm2A5kiTDPE9q-wzBl40nzi5UhtF7jfXBQ8PmNbI4TJl2Y5GDf_BikMyUow/exec",
       {
         method: "POST",
         body: JSON.stringify(form),
@@ -60,7 +60,7 @@ export default function CreditEntryForm() {
         placeholder="Balance"
         value={form.balance}
         onChange={handleChange}
-        className="w-full mb-2 p-2 rounded border"
+        className="w-full mb-4 p-2 rounded border"
         required
       />
 
