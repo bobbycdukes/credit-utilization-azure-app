@@ -16,7 +16,7 @@ export default function CreditEntryForm() {
     console.log("Submit button clicked. Sending data...");
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbz-WyfMqH__eKQWoS86UkSr-MPH-sOxcSnmofmihVG14nb9s3ctZybSw92sxjm3z_hzEg/exec",
+      "https://script.google.com/macros/s/AKfycbzAif--HrOBnCfZ5rLxEqOqrJcS2QDzdzFuypmsN-mjQCrb79kc0-HcFjGaOU914qNw/exec",
       {
         method: "POST",
         body: JSON.stringify(form),
