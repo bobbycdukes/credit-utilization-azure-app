@@ -5,7 +5,10 @@ import './index.css'
 import CreditUtilizationTable from './CreditUtilizationTable'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+<React.StrictMode>
+  <div className="p-4 space-y-6">
+    <CreditEntryForm />
     <CreditUtilizationTable />
-  </React.StrictMode>
+  </div>
+</React.StrictMode>
 )
