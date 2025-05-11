@@ -13,6 +13,7 @@ export default function CreditEntryForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Submit button clicked. Sending data...");
 
     const response = await fetch(
       "https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbx8RIXKwbTVm2A5kiTDPE9q-wzBl40nzi5UhtF7jfXBQ8PmNbI4TJl2Y5GDf_BikMyUow/exec",
