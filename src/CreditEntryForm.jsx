@@ -16,7 +16,7 @@ export default function CreditEntryForm() {
     console.log("Submit button clicked. Sending data...");
 
     try {
-      const response = await fetch("https://creditutil-fn-core.azurewebsites.net/api/SaveCreditEntry", {
+      const response = await fetch("https://creditutil-fn-core.azurewebsites.net/api/HttpTriggerCR1", {
         method: "POST",
         body: JSON.stringify(form),
         headers: {
