@@ -20,7 +20,7 @@ export default function CreditEntryForm() {
       "https://script.google.com/macros/s/AKfycbz-WyfMqH__eKQWoS86UkSr-MPH-sOxcSnmofmihVG14nb9s3ctZybSw92sxjm3z_hzEg/exec";
 
     try {
-const response = await fetch("https://<creditutil-fn-core>.azurewebsites.net/api/SaveCreditEntry", {
+const response = await fetch("https://creditutilfncore.azurewebsites.net/api/SaveCreditEntry", {
   method: "POST",
   body: JSON.stringify(form),
   headers: { "Content-Type": "application/json" },
