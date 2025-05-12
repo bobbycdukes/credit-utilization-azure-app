@@ -15,23 +15,21 @@ export default function CreditEntryForm() {
     e.preventDefault();
     console.log("Submit button clicked. Sending data...");
 
-    const proxyUrl = "https://corsproxy.io/?";
-    const googleScriptURL =
-      "https://script.google.com/macros/s/AKfycbz-WyfMqH__eKQWoS86UkSr-MPH-sOxcSnmofmihVG14nb9s3ctZybSw92sxjm3z_hzEg/exec";
-
     try {
-const response = await fetch("https://creditutil-fn-core.azurewebsites.net/api/SaveCreditEntry", {
-  method: "POST",
-  body: JSON.stringify(form),
-  headers: { "Content-Type": "application/json" },
-});
-
+      const response = await fetch("https://creditutilfncore.azurewebsites.net/api/SaveCreditEntry", {
+        method: "POST",
+        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (response.ok) {
         alert("Submitted successfully!");
         setForm({ cardName: "", creditLine: "", balance: "" });
       } else {
         alert("Submission failed.");
+        console.error("Function error:", await response.text());
       }
     } catch (error) {
       console.error("Error submitting:", error);
